@@ -67,8 +67,8 @@ public class WhatsappRepository {
     }
 
     public boolean isGroupPresent(Group group) {
-        if( groupUserMap.containsKey(group) == true){
-            return true;
+        for( Group grp : groupUserMap.keySet() ){
+            if( grp.getName().equals(group.getName()))return true;
         }
         return false;
     }
